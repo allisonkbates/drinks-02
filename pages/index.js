@@ -6,6 +6,7 @@ export default function Home(initialDrinks) {
   return (
     <div className="container">
       <h1>Drinks MVP</h1>
+      <p>You have {initialDrinks.initialDrinks.length} drinks in your database.</p>
       {console.log(initialDrinks)}
       <Form />
     </div>
