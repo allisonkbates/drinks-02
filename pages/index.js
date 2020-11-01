@@ -1,17 +1,16 @@
 import { table, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
-import Form from '../components/Form';
+import RecDrinks from '../components/RecDrinks';
+import Footer from '../components/Footer';
 
-export default function Home(initialDrinks) {
+export default function Home(props) {
   return (
-    <div className="container">
+    <div>
       <Nav />
       <Hero />
-      <h1>Drinks MVP</h1>
-      <p>You have {initialDrinks.initialDrinks.length} drinks in your database.</p>
-      {console.log(initialDrinks)}
-      <Form />
+      <RecDrinks drinks={props.drinks}/>
+      <Footer />
     </div>
   )
 }
@@ -21,7 +20,7 @@ export async function getServerSideProps() {
     const drinks = await table.select({}).firstPage();
     return {
       props: {
-        initialDrinks: prepareRecords(drinks)
+        drinks: prepareRecords(drinks)
       }
     }
   } catch(err) {
