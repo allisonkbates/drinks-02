@@ -1,11 +1,13 @@
 import { table, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 import Form from '../components/Form';
 
 export default function Home(initialDrinks) {
   return (
     <div className="container">
       <Nav />
+      <Hero />
       <h1>Drinks MVP</h1>
       <p>You have {initialDrinks.initialDrinks.length} drinks in your database.</p>
       {console.log(initialDrinks)}
