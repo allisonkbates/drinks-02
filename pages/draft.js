@@ -23,7 +23,7 @@ function Nav() {
           height: 72px; 
           font-family: 'Advent Pro', sans-serif;
           display: flex;
-          background-color: #EFF3F4ß;
+          background-color: #EFF3F4;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
