@@ -44,13 +44,13 @@ const StyledCTA = styled.a`
 export default function Nav() {
 	return (
 		<StyledNav>
-			<Link href="/test">
+			<Link href="/">
 				<StyledLogo>
 					<img src="/logo-color.svg" height="50"></img>
 					<StyledTitle>It's Happy Hour</StyledTitle>
 				</StyledLogo>
 			</Link>
-			<Link href="/test">
+			<Link href="/add">
 				<StyledCTA>Add Cocktail</StyledCTA>
 			</Link>
 		</StyledNav>

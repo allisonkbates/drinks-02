@@ -1,3 +1,8 @@
+## To Dos
+- Basic card in styled components
+- Style Form to Add cocktail
+
+
 
 ## API Endpoints
 - getDrinks

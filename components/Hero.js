@@ -34,7 +34,7 @@ const StyledHeroCard = styled.div `
 	background-color: #EFF3F4;
 	height: 220px;
 	width: 300px;
-	margin: 0px 80px;
+	margin: 0px 5%;
 	color: #222222;
 
   h2 {
