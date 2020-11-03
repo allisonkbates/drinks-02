@@ -49,5 +49,3 @@ export default function Card(props) {
 		</StyledCard>
 	)
 }
-
-//<img src={`/${drinkImageName}.png`} height="194" width="210"></img>

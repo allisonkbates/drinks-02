@@ -1,7 +1,7 @@
 import { table, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
-import RecDrinks from '../components/RecDrinks';
+import CardLayout from '../components/CardLayout';
 import Footer from '../components/Footer';
 
 export default function Home(props) {
@@ -9,7 +9,7 @@ export default function Home(props) {
     <div>
       <Nav />
       <Hero />
-      <RecDrinks drinks={props.drinks}/>
+      <CardLayout drinks={props.drinks} filter={"daniel-recommends"} count={6}/>
       <Footer />
     </div>
   )
