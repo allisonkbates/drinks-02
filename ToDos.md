@@ -14,7 +14,9 @@
 - [ ] get a specific drink based on ID
 - [ ] get a list of drinks based on a specific filter
 
-
+## Notes on Nav
+- [ ] change to mobile style nav with hamburger when needed
+- [ ] add search bar when needed
 
 ## Colors
 - #FFFFFF

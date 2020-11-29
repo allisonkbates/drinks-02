@@ -7,6 +7,9 @@ const StyledHero = styled.div`
 	height: 490px;
 	display: flex;
 	flex-direction: column;
+	@media only screen and (min-width: 800px) {
+		height: 490px;
+	}
 `;
 
 const StyledBadge = styled.div`
@@ -31,7 +34,7 @@ const StyledBadge = styled.div`
 `;
 
 const StyledHeroCard = styled.div `
-	background-color: #EFF3F4;
+	background-color: #FFFFFF;
 	height: 220px;
 	width: 300px;
 	margin: 0px 5%;
@@ -59,10 +62,10 @@ export default function Hero() {
 			<StyledBadge>
 				<p>DRINK OF THE DAY</p>
 			</StyledBadge>
-			<StyledHeroCard>
+		  {/*<StyledHeroCard>
 				<h2>Boulevardier</h2>
 				<p>Learn how to make this classic whiskey twist on the Negroni. A simple drink with whiskey, sweet vermouth & campari.</p>
-			</StyledHeroCard>
+			</StyledHeroCard> */}
 		</StyledHero>
 	)
 }
