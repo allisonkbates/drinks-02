@@ -172,18 +172,18 @@ class Form extends Component {
 					<textarea name="ingredients" rows="4" onChange={this.handleChange}></textarea>
           <label htmlFor="preparation">Tell us how to make your cocktail</label>
 					<textarea name="preparation" rows="4" onChange={this.handleChange}></textarea>
-          <label for="alcohol">Select the primary alcohol</label>
+          <label htmlFor="alcohol">Select the primary alcohol</label>
 					<div className="select-container">
 						<input type="radio" id="Gin" name="alcohol" value="Gin"/>
-						<label for="Gin">Gin</label><br></br>
+						<label htmlFor="Gin">Gin</label><br></br>
 						<input type="radio" id="Whiskey" name="alcohol" value="Whiskey"/>
-						<label for="Whiskey" class="radio">Whiskey</label><br></br>
+						<label htmlFor="Whiskey" className="radio">Whiskey</label><br></br>
 						<input type="radio" id="Vodka" name="alcohol" value="Vodka"/>
-						<label for="Vodka" className="radio">Vodka</label><br></br>
+						<label htmlFor="Vodka" className="radio">Vodka</label><br></br>
 						<input type="radio" id="Rum" name="alcohol" value="Rum"/>
-						<label for="Rum" className="radio">Rum</label><br></br>
+						<label htmlFor="Rum" className="radio">Rum</label><br></br>
 						<input type="radio" id="other" name="alcohol" value="other"/>
-						<label for="other" className="radio">Other</label>
+						<label htmlFor="other" className="radio">Other</label>
 					</div>
           <label htmlFor="submit" className="submit-label">Submit</label>
 					<input type="submit" name="submit"/>

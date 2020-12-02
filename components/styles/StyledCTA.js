@@ -6,7 +6,7 @@ const StyledCTA = styled.a`
 	align-items: center;
 	padding: 0px 25px;
 	background-color: #377084;
-	border-radius: 20px;
+	border-radius: 5px;
 	color: #FFFFFF;
 	font-family: 'Advent Pro', sans-serif;
 	font-size: 16px;

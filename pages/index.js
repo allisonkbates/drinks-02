@@ -9,7 +9,7 @@ export default function Home(props) {
     <div>
       <Nav />
       <Hero />
-      <CardLayout drinks={props.drinks} filter={"daniel-recommends"} count={6}/>
+     {/* <CardLayout drinks={props.drinks} filter={"daniel-recommends"} count={6}/> */}
       <Footer />
     </div>
   )

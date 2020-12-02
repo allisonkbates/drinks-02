@@ -9,11 +9,11 @@ export default function Nav() {
 			<Link href="/">
 				<StyledLogo>
 					<img src="/logo-color.svg"></img>
-					<h1>It's Happy Hour</h1>
+					<h1>Drinks DB</h1>
 				</StyledLogo>
 			</Link>
 			<Link href="/add">
-				<StyledCTA>Add Drink</StyledCTA>
+				<StyledCTA>Add a Drink</StyledCTA>
 			</Link>
 		</StyledNav>
 	)
