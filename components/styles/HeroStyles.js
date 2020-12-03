@@ -4,12 +4,12 @@ const StyledHero = styled.div`
 	background: url('/hero-image-desktop.jpg');
 	background-position: center center;
 	background-size: cover;
-	height: 250px;
+	height: 490px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	@media only screen and (min-width: 768px) {
-		height: 490px;
+		
 	}
 `;
 
