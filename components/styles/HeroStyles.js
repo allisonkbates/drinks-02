@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHero = styled.div`
-	background: url('/hero-image-desktop.jpg');
+	background: blue;
 	background-position: center center;
 	background-size: cover;
 	height: 300px;
