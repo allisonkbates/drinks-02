@@ -1,6 +1,6 @@
 import { table, prepareRecords } from './api/utils/Airtable';
-import Nav from '../components/Nav/Nav';
-import Hero from '../components/Hero/Hero';
+import Nav from '../components/Nav';
+import Hero from '../components/Hero';
 import CardLayout from '../components/CardLayout';
 import Footer from '../components/Footer';
 

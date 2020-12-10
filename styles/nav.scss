@@ -1,4 +1,4 @@
-.nav {
+.nav__container {
 	height: 96px; 
 	display: flex;
 	align-items: center;
@@ -8,23 +8,23 @@
 	padding: 0px 5%;
 }
 
-.logoContainer {
+.logo__container {
 	display: flex;
 	cursor: pointer;
 }
 
-.logoImg {
+.logo__img {
 	height: 50px;
 }
 
-.logoTitle {
+.logo__title {
 	font-family: 'Advent Pro', sans-serif;
 	font-size: 24px;
 	font-weight: 400;
 	color: #377084;
 }
 
-.link {
+.btn--primary {
 	height: 40px;
 	display: flex;
 	align-items: center;
@@ -38,6 +38,6 @@
 	cursor: pointer;
 }
 
-.link:hover {
+.btn--primary:hover {
 	background-color: #2c5969;
 }
