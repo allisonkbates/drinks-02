@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 export default function add() {
 	return (
-		<div>
+		<div style={{backgroundColor: "#EFF3F4"}}>
 			<Nav />
 			<Form />
 			<Footer />

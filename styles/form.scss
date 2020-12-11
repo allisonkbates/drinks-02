@@ -1,0 +1,150 @@
+.add__page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.add__container {
+	background-color: white;
+	width: 100%;
+	padding-bottom: 40px;
+	margin: 1px 0px;
+	@media only screen and (min-width: 768px) {
+		width: 60%;
+		margin: 5%;
+		padding: 3% 5% 20px;
+	}
+}
+
+.add__heading {
+	font-family: "Advent Pro", sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	color: #377084;
+	margin-bottom: 0;
+	padding: 0px 20px;
+	@media only screen and (min-width: 768px) {
+
+	}
+}
+
+.add__text {
+	font-family: "Advent Pro", sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #555555;
+	width: 80%;
+	padding: 0px 20px 0px 20px;
+	@media only screen and (min-width: 768px) {
+
+	}
+}
+
+.form__container {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	align-items: flex-start;
+	padding: 0px 20px;
+	@media only screen and (min-width: 768px) {
+		align-items: flex-start;
+	}
+	
+	
+	
+	label {
+		font-family: "Oxygen", sans-serif;
+		color: #555555;
+		margin: 10px -10px -10px 16px;
+		padding: 0px 5px;
+		background-color: #FFFFFF;
+		z-index: 1;
+	}
+
+	input[type="text"],
+	textarea {
+		background-color: transparent;
+		border: 2px solid #377084;
+		border-radius: 5px;
+		width: 90%;
+		margin-bottom: 20px;
+		min-height: 40px;
+		padding: 10px;
+		font-size: 19px;
+		font-family: 'Helvetica', sans-serif;
+	}
+
+	input[type="text"]:focus,
+	textarea:focus {
+		outline-color: #2c5969;
+	}
+
+	textarea {
+		min-height: 80px;
+	}
+
+	.submit-label {
+		display: none;
+	}
+
+	.select-container {
+		min-height: 50px;
+		width: calc(90% - 14px);
+		padding: 16px;
+		border: 2px solid #377084;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+
+	input[type="radio"] {
+		opacity: 0;
+		position: absolute;
+	}
+
+	input[type="radio"]:checked + label:after {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		top: 9px;
+		left: -18px;
+		background: #377084;
+		border-radius: 50%;
+	}
+
+	input[type="radio"] + label {
+		position: relative;
+		top: 0;
+		padding: 5px 5px;
+		margin: 0 16px 0 24px;
+		cursor: pointer;
+		font-weight: 500;
+	}
+
+	input[type="radio"] + label:before {
+		content: "";
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		border: 2px solid;
+		border-radius: 50%;
+		left: -22px;
+		color: #555555;
+	}
+
+	input[type="submit"] {
+		font-family: 'Advent Pro', sans-serif;
+		font-size: 16px;
+		padding: 0px 25px;
+		height: 40px;
+		color: #fffaf0;
+		background-color: #377084;
+		border-radius: 5px;
+		border: none;
+		margin: 20px 0px;
+	}
+}

@@ -4,6 +4,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	@media only screen and (min-width: 768px) {
 		height: 490px;
 	}
@@ -22,6 +23,8 @@
 	@media only screen and (min-width: 768px) {
 		height: 110px;
 		width: 110px;
+		position: absolute;
+		top: 160px;
 	}
 }
 
@@ -31,15 +34,22 @@
 	font-weight: 400;
 	color: #EFF3F4;
 	text-align: center;
-	padding: 22px;
+	padding: 11px;
+	@media only screen and (min-width: 768px) {
+		font-size: 18px;
+		padding: 22px;
+	}
 }
 
 .hero-card {
 	background-color: #FFFFFF;
-	margin: 110px 0px 0px;
+	width: 100%;
+	position: absolute;
+	top: 348px;
 	color: #222222;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 	@media only screen and (min-width: 768px) {
+		position: static;
 		height: 220px;
 		width: 300px;
 		margin: 0px 5%;
@@ -48,11 +58,12 @@
 
 .hero-card__heading {
 	font-family: 'Advent Pro', sans-serif;
-	font-size: 32px;
+	font-size: 28px;
 	font-weight: 400;
 	color: #377084;
 	margin: 16px 16px 8px 16px;
 	@media only screen and (min-width: 768px) {
+		font-size: 32px;
 		text-align: center;
 		color: #222222;
 		margin: 32px 0px 24px 0px;
@@ -61,9 +72,10 @@
 
 .hero-card__text {
 	font-family: 'Oxygen', sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	margin: 0px 16px 16px;
 	@media only screen and (min-width: 768px) {
+		font-size: 16px;
 		text-align: center;
 		padding: 0px 32px;
 	}
