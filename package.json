@@ -10,6 +10,7 @@
   "dependencies": {
     "airtable": "^0.10.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "glider-js": "^1.7.3",
     "next": "^10.0.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
