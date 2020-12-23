@@ -133,7 +133,7 @@
 		border: 2px solid;
 		border-radius: 50%;
 		left: -22px;
-		color: #555555;
+		color: #377084;
 	}
 
 	input[type="submit"] {
@@ -146,5 +146,9 @@
 		border-radius: 5px;
 		border: none;
 		margin: 20px 0px;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #2c5969;
 	}
 }
