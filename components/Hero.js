@@ -1,6 +1,7 @@
 export default function Hero() {
 	return (
 		<div className="hero__container">
+			<img src="/hero-image-desktop.jpg" className="hero-img--mobile"></img>
 			<div className="badge">
 				<p className="badge__text">DRINK OF THE DAY</p>
 			</div>
