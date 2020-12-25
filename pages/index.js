@@ -9,8 +9,8 @@ export default function Home(props) {
     <div className="">
       <Nav />
       <Hero />
-      <Rec />
-     {/* <Rec drinks={props.drinks} filter={"daniel-recommends"} count={6} label={"Recently Added"}/> */}
+      <Rec drinks={props.drinks} filter={"daniel-recommends"} count={10} label={"Recently Added"}/>
+      <Footer />
     </div>
   )
 }

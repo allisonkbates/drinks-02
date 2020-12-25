@@ -1,29 +1,44 @@
-//import CardLayout from './CardLayout';
 import Slider from "react-slick";
+import Card from '../components/Card';
 
-export default function Rec() {
+function getFilteredDrinks(drinks, tag, count) {
+	return drinks
+		.filter(drink => drink.fields.tags && drink.fields.tags.includes(tag))
+		.map(drink => <Card key={drink.id} drink={drink}></Card>)
+		.slice(0, count)
+}
+
+export default function Rec(props) {
+	/* Drink Formatting */
+	const Drinks = getFilteredDrinks(props.drinks, props.filter, props.count);
+	
+	/* Slider Settings */
 	let settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 3,
+		slidesToScroll: 3,
+		responsive: [
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1.5,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			}
+		}
+		]
 	};
-	
-	return (
-		<Slider {...settings}>
-			
-		</Slider>
-	)
-}
 
-
-/*
-export default function Recommended(props) {
 	return (
 		<div className="rec__container">
 			<h2 className="rec__heading">{props.label}</h2>
-			<CardLayout drinks={props.drinks} filter={"daniel-recommends"} count={6}></CardLayout>
+			<Slider {...settings} className="">
+				{Drinks}
+				{console.log(Drinks)}
+			</Slider>
 		</div>
 	)
-}*/
+}
