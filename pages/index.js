@@ -6,10 +6,11 @@ import Footer from '../components/Footer';
 
 export default function Home(props) {
   return (
-    <div className="home__container">
+    <div className="">
       <Nav />
       <Hero />
-      <Rec drinks={props.drinks} filter={"daniel-recommends"} count={6} label={"Recently Added"}/>
+      <Rec />
+     {/* <Rec drinks={props.drinks} filter={"daniel-recommends"} count={6} label={"Recently Added"}/> */}
     </div>
   )
 }
