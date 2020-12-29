@@ -17,14 +17,14 @@ export default function Rec(props) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
 		slidesToScroll: 3,
 		responsive: [
 		{
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 1.5,
-				slidesToScroll: 3,
+				slidesToScroll: 2,
 				infinite: true,
 				dots: true
 			}
@@ -35,7 +35,7 @@ export default function Rec(props) {
 	return (
 		<div className="rec__container">
 			<h2 className="rec__heading">{props.label}</h2>
-			<Slider {...settings} className="">
+			<Slider {...settings} className="rec__slider">
 				{Drinks}
 				{console.log(Drinks)}
 			</Slider>
