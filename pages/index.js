@@ -15,15 +15,12 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps() {
-  try {
-    const drinks = await table.select({}).firstPage();
-    return {
-      props: {
-        drinks: prepareRecords(drinks)
-      }
+export async function getStaticProps() {
+  const drinks = await table.select({}).firstPage();
+  const preparedDrinks = prepareRecords(drinks);
+  return {
+    props: {
+      drinks: preparedDrinks
     }
-  } catch(err) {
-    console.error(err);
   }
 }

@@ -1,37 +1,40 @@
-import { table, prepareRecords, prepareRecord } from '../../api/utils/Airtable';
+import { table, prepareRecords } from "../../api/utils/Airtable";
 
 function Drink(props) {
+	const drink = props.drinks.fields;
+
 	return (
-		<div>
-			<h1>Hello World</h1>
-			{console.log(props.fields)}
-		</div>
+			<div>
+				<h1>{drink.cocktailName}</h1>
+				{console.log(props)}
+			</div>
 	)
 }
 
+// This function gets called at build time
 export async function getStaticPaths() {
-  try {
-		const drinks = await table.select({}).firstPage();
-		const preparedDrinks = prepareRecords(drinks);
-		const paths = preparedDrinks.map((drink) => ({
-			params: { id: drink.id },
-		}))
-		console.log(paths);
-		return { paths, fallback: false }
-  } catch(err) {
-    console.error(err);
-  }
+	// Call an external API endpoint to get posts
+	const drinks = await table.select({}).firstPage();
+  const preparedDrinks = prepareRecords(drinks);
+
+	// Get the paths we want to pre-render based on posts
+	const paths = preparedDrinks.map((drink) => ({
+		params: { id: drink.id },
+	}))
+
+	return { paths, fallback: false }
 }
 
+// This also gets called at build time
 export async function getStaticProps({ params }) {
 	const drinks = await table.select({}).firstPage();
-	console.log(`Prepared Drink: ${drinks}`)
-	const preparedDrinks = await prepareRecords(drinks);
-	//const preparedDrinks = prepareRecord(drinks);
-	
-  const specificDrink = await preparedDrinks.filter(drink => drink.id === params.id);
-	console.log(`Specific Drink: ${preparedDrinks}`);
-  return { props: {specificDrink }}
+	const preparedDrinks = prepareRecords(drinks);
+	const specificDrink = preparedDrinks.find(drink => drink.id === params.id)
+  return {
+    props: {
+      drinks: specificDrink
+    }
+  }
 }
 
 export default Drink;
