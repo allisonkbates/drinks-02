@@ -1,6 +1,6 @@
 import { table, prepareRecords} from './utils/Airtable';
 
-export default async (req, res) => {
+export default async function getDrinks(req, res) {
 	try {
 		const records = await table.select({}).firstPage();
 		const preparedRecords = prepareRecords(records);

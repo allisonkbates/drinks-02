@@ -1,5 +1,8 @@
+import Link from 'next/link';
+
 export default function Card(props) {
 	const drink = props.drink.fields;
+	const id = props.drink.id;
 
 	return (
 		<div className="card">
@@ -7,7 +10,7 @@ export default function Card(props) {
 				<img src={`/${drink.imgpath}.png`} className="card__img"></img>
 			</div>
 			<div className="card__drink-name">
-				<h2>{drink.cocktailName}</h2>
+				<Link href={`drinks/${id}`}>{drink.cocktailName}</Link>
 			</div>
 		</div>
 	)
