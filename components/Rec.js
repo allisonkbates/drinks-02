@@ -37,7 +37,6 @@ export default function Rec(props) {
 			<h2 className="rec__heading">{props.label}</h2>
 			<Slider {...settings} className="rec__slider">
 				{Drinks}
-				{console.log(Drinks)}
 			</Slider>
 		</div>
 	)

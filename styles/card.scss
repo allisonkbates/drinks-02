@@ -1,0 +1,42 @@
+.card {
+	margin-right: 10px;
+	@media only screen and (min-width: 768px) {
+		margin-right: 20px;
+	}
+}
+
+.card__img-container {
+	height: 150px;
+	@media only screen and (min-width: 768px) {
+		height: 200px;
+	}
+}
+
+.card__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card__drink-name {
+	font-family: 'Oxygen', serif;
+	font-size: 12px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: 700;
+	color: #222222;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+	padding: 16px 12px;
+	margin-bottom: 5px;
+	@media only screen and (min-width: 768px) {
+		font-size: 14px;
+	}
+}
+
+.card__drink-name h2 {
+	margin: 0px;
+}
