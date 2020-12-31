@@ -10,7 +10,7 @@ export default function Card(props) {
 				<img src={`/${drink.imgpath}.png`} className="card__img"></img>
 			</div>
 			<div className="card__drink-name">
-				<Link href={`drinks/${id}`}>{drink.cocktailName}</Link>
+				<Link href={`${id}`}><a className="card__drink-link">{drink.cocktailName}</a></Link>
 			</div>
 		</div>
 	)

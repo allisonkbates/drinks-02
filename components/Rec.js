@@ -34,7 +34,7 @@ export default function Rec(props) {
 
 	return (
 		<div className="rec__container">
-			<h2 className="rec__heading">{props.label}</h2>
+			<h2 className={`rec__heading ${props.size}`}>{props.label}</h2>
 			<Slider {...settings} className="rec__slider">
 				{Drinks}
 			</Slider>

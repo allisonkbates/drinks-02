@@ -1,12 +1,17 @@
 import { table, prepareRecords } from "../../api/utils/Airtable";
+import Rec from '../../../components/Rec';
+import Nav from '../../../components/Nav';
+import Footer from '../../../components/Footer';
 
 function Drink(props) {
-	const drink = props.drinks.fields;
+	const drink = props.specificDrink.fields;
 
 	return (
 			<div>
+				<Nav></Nav>
 				<h1>{drink.cocktailName}</h1>
-				{console.log(props)}
+				<Rec drinks={props.drinks} filter={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></Rec>
+				<Footer />
 			</div>
 	)
 }
@@ -32,7 +37,8 @@ export async function getStaticProps({ params }) {
 	const specificDrink = preparedDrinks.find(drink => drink.id === params.id)
   return {
     props: {
-      drinks: specificDrink
+			specificDrink: specificDrink,
+			drinks: preparedDrinks
     }
   }
 }
