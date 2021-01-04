@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { table, prepareRecords } from "../../api/utils/Airtable";
 import Rec from '../../../components/Rec';
 import Nav from '../../../components/Nav';
@@ -9,7 +10,30 @@ function Drink(props) {
 	return (
 			<div>
 				<Nav></Nav>
-				<h1>{drink.cocktailName}</h1>
+				<div className="drink__page">
+				<div className="drink__container">
+					<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--mobile"></img>
+					<div className="drink__left">
+						<h2 className="drink__name">{drink.cocktailName}</h2>
+						<Link href={drink.sourceLink || "/"}><a className="drink__source">{`By ${drink.source}`}</a></Link> {/* Change this to conditional based on whether this data is available */}
+						<div className="drink__line"></div>
+						<p class="drink__editorial">{drink.editorialNotes}</p>
+						<h3>Ingredients</h3>
+						<p>{drink.ingredients}</p>
+						<h3>Preparation</h3>
+						<p>{drink.preparation}</p>
+					</div>
+					<div className="drink__right">
+						<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--desktop"></img>
+						<h3>Variations</h3>
+						<p>{drink.variations}</p>
+						<h3>Barware</h3>
+						<p>{drink.barware}</p>
+						<h3>Tags</h3>
+						<p>{drink.tags}</p>
+					</div>
+				</div>
+				</div>
 				<Rec drinks={props.drinks} filter={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></Rec>
 				<Footer />
 			</div>

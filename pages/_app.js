@@ -9,6 +9,7 @@ import '../styles/hero.scss';
 import '../styles/rec.scss';
 import '../styles/card.scss';
 import '../styles/form.scss';
+import '../styles/drink.scss';
 
 
 function MyApp({ Component, pageProps }) {
