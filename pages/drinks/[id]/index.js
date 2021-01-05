@@ -17,7 +17,7 @@ function Drink(props) {
 						<h2 className="drink__name">{drink.cocktailName}</h2>
 						<Link href={drink.sourceLink || "/"}><a className="drink__source">{`By ${drink.source}`}</a></Link> {/* Change this to conditional based on whether this data is available */}
 						<div className="drink__line"></div>
-						<p class="drink__editorial">{drink.editorialNotes}</p>
+						<p className="drink__editorial">{drink.editorialNotes}</p>
 						<h3>Ingredients</h3>
 						<p>{drink.ingredients}</p>
 						<h3>Preparation</h3>
