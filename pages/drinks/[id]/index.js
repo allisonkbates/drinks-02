@@ -6,6 +6,23 @@ import Footer from '../../../components/Footer';
 
 function Drink(props) {
 	const drink = props.specificDrink.fields;
+	console.log(drink);
+
+	function formatList(text) {
+		const textToRows = (text.split('\n'))
+		return <ul className="drink__body">{textToRows.map((row) => {
+			return <li key={row}>{row}</li>
+		})}
+		</ul>
+	}
+
+	function formatOrderedList(text) {
+		const textToRows = (text.split('\n'))
+		return <ol className="drink__body">{textToRows.map((row) => {
+			return <li key={row}>{row}</li>
+		})}
+		</ol>
+	}
 
 	return (
 			<div>
@@ -15,22 +32,27 @@ function Drink(props) {
 					<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--mobile"></img>
 					<div className="drink__left">
 						<h2 className="drink__name">{drink.cocktailName}</h2>
-						<Link href={drink.sourceLink || "/"}><a className="drink__source">{`By ${drink.source}`}</a></Link> {/* Change this to conditional based on whether this data is available */}
+						<Link href={drink.sourceLink || "/"}>
+							<a className="drink__source">{drink.source ? `By ${drink.source}` : ``}</a>
+						</Link>
 						<div className="drink__line"></div>
-						<p className="drink__editorial">{drink.editorialNotes}</p>
-						<h3>Ingredients</h3>
-						<p>{drink.ingredients}</p>
-						<h3>Preparation</h3>
-						<p>{drink.preparation}</p>
+						<p className="drink__editorial">{drink.editorialNotes || ''}</p>
+						<div className="drink__line"></div>
+						<h3 className="drink__heading">Ingredients</h3>
+						{formatList(drink.ingredients)}
+						<div className="drink__line"></div>
+						<h3 className="drink__heading">Preparation</h3>
+						{formatOrderedList(drink.preparation)}
+						<div className="drink__line"></div>
 					</div>
 					<div className="drink__right">
 						<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--desktop"></img>
-						<h3>Variations</h3>
-						<p>{drink.variations}</p>
-						<h3>Barware</h3>
+						<h3 className="drink__heading">Variations</h3>
+						<p className="drink__body--link">{drink.variations}</p>
+						<h3 className="drink__heading">Barware</h3>
 						<p>{drink.barware}</p>
-						<h3>Tags</h3>
-						<p>{drink.tags}</p>
+						<h3 className="drink__heading">Tags</h3>
+						<p className="drink__body--link">{drink.tags}</p>
 					</div>
 				</div>
 				</div>

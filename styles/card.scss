@@ -1,5 +1,6 @@
 .card {
 	margin-right: 10px;
+	cursor: pointer;
 	@media only screen and (min-width: 768px) {
 		margin-right: 20px;
 	}
@@ -40,4 +41,8 @@
 .card__drink-link {
 	color: #222222;
 	text-decoration: none;
+}
+
+.card__link {
+	cursor: pointer;
 }

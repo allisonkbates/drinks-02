@@ -64,5 +64,34 @@
 }
 
 .drink__editorial {
-	
+	font-family: 'Oxygen', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #222222;
+	text-align: left;
+}
+
+.drink__heading {
+	font-family: 'Advent Pro', sans-serif;
+	font-size:20px;
+	color: #222222;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.drink__body {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #222222;
+	text-align: left;
+}
+
+.drink__body--link {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #377084;
+	text-align: left;
+	text-decoration: underline;
 }
