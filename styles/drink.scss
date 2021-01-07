@@ -11,6 +11,7 @@
 	margin: 1px 0px;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	@media only screen and (min-width: 768px) {
 		width: 60%;
 		margin: 5%;
@@ -22,8 +23,12 @@
 	flex: 100%;
 	padding: 0px 16px;
 	@media only screen and (min-width: 768px) {
-		flex: 50%;
+		flex: 45%;
 	}
+}
+
+.drink__right {
+	padding-left: 32px;
 }
 
 .drink__img--mobile {
@@ -36,6 +41,8 @@
 }
 
 .drink__img--desktop {
+	height: 230px;
+	margin: 25px 0px;
 	display: none;
 	@media only screen and (min-width: 768px) {
 		display: block;
@@ -47,6 +54,7 @@
 	font-size: 32px;
 	color: #222222;
 	font-weight: 400;
+	margin: 25px 0px;
 }
 
 .drink__source {
