@@ -28,7 +28,9 @@
 }
 
 .drink__right {
-	padding-left: 32px;
+	@media only screen and (min-width: 768px) {
+		padding-left: 32px;
+	}
 }
 
 .drink__img--mobile {
@@ -42,6 +44,8 @@
 
 .drink__img--desktop {
 	height: 230px;
+	width: 320px;
+	object-fit: cover;
 	margin: 25px 0px;
 	display: none;
 	@media only screen and (min-width: 768px) {
@@ -54,15 +58,16 @@
 	font-size: 32px;
 	color: #222222;
 	font-weight: 400;
-	margin: 25px 0px;
+	margin: 25px 0px 8px;
 }
 
 .drink__source {
 	font-family: 'Advent Pro', sans-serif;
-	font-size:24px;
+	font-size:20px;
 	color: #222222;
 	font-weight: 300;
 	text-decoration: none;
+	margin-bottom: 8px;
 }
 
 .drink__line {
@@ -93,6 +98,7 @@
 	font-weight: 400;
 	color: #222222;
 	text-align: left;
+	padding-left: 16px;
 }
 
 .drink__body--link {
@@ -102,4 +108,20 @@
 	color: #377084;
 	text-align: left;
 	text-decoration: underline;
+}
+
+.drink__list-items {
+	padding-bottom: 10px;
+}
+
+.drink__glassware {
+	display: flex;
+	align-items: flex-end;
+}
+
+.drink__variation {
+	padding-left: 0;
+	li {
+		list-style-type: none;
+	}
 }

@@ -4,24 +4,59 @@ import Rec from '../../../components/Rec';
 import Nav from '../../../components/Nav';
 import Footer from '../../../components/Footer';
 
+
+
 function Drink(props) {
 	const drink = props.specificDrink.fields;
 	console.log(drink);
 
+	// for the ingredients
 	function formatList(text) {
 		const textToRows = (text.split('\n'))
 		return <ul className="drink__body">{textToRows.map((row) => {
-			return <li key={row}>{row}</li>
+			return <li className="drink__list-items" key={row}>{row}</li>
 		})}
 		</ul>
 	}
 
+	// for preparation
 	function formatOrderedList(text) {
 		const textToRows = (text.split('\n'))
 		return <ol className="drink__body">{textToRows.map((row) => {
-			return <li key={row}>{row}</li>
+			return <li className="drink__list-items" key={row}>{row}</li>
 		})}
 		</ol>
+	}
+
+	// to determine whether to show editorial styling
+	const editorialNotes = drink.editorialNotes;
+	let showEditorial;
+	if (editorialNotes) {
+		showEditorial;	
+	/*	<div>
+			<p className="drink__editorial">{drink.editorialNotes || ''}</p>
+			<div className="drink__line"></div>
+		</div>*/
+	} else {
+		showEditorial;
+	}
+
+	function formatVariations(variations) {
+		return <ul className="drink__variation">{variations.map(variation => {
+			return <li className="drink__body--link" key={variation}>{variation}</li>
+		})}</ul>
+	}
+
+	const variations = drink.variations;
+	let showVariations;
+	if (variations) {
+		showVariations = 
+		<div>
+			<h3 className="drink__heading">Variations</h3>
+			{formatVariations(drink.variationsLookup)}
+		</div>
+	} else {
+		showVariations;
 	}
 
 	return (
@@ -36,23 +71,25 @@ function Drink(props) {
 							<a className="drink__source">{drink.source ? `By ${drink.source}` : ``}</a>
 						</Link>
 						<div className="drink__line"></div>
-						<p className="drink__editorial">{drink.editorialNotes || ''}</p>
-						<div className="drink__line"></div>
+						{showEditorial}
 						<h3 className="drink__heading">Ingredients</h3>
 						{formatList(drink.ingredients)}
 						<div className="drink__line"></div>
 						<h3 className="drink__heading">Preparation</h3>
 						{formatOrderedList(drink.preparation)}
-						<div className="drink__line"></div>
 					</div>
 					<div className="drink__right">
 						<img src={`/${drink.imgPath}.png`} height="200" className="drink__img--desktop"></img>
-						<h3 className="drink__heading">Variations</h3>
-						<p className="drink__body--link">{drink.variations}</p>
+						{showVariations}
 						<h3 className="drink__heading">Barware</h3>
-						<p>{drink.barware}</p>
+						<div className="drink__glassware">
+							<img src={`/${drink.glassware}.svg`}></img>
+							<p className="drink__body">{drink.glassware}</p>
+						</div>
+						{/*
 						<h3 className="drink__heading">Tags</h3>
-						<p className="drink__body--link">{drink.tags}</p>
+						<p className="drink__body--link">{drink.allTags}</p>
+						*/}
 					</div>
 				</div>
 				</div>

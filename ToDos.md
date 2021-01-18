@@ -20,3 +20,6 @@
 
 ## Colors
 - #FFFFFF
+
+## 1-18 To Dos
+- 
