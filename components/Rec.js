@@ -3,14 +3,15 @@ import Card from '../components/Card';
 
 function getFilteredDrinks(drinks, tag, count) {
 	return drinks
-		.filter(drink => drink.fields.tags && drink.fields.tags.includes(tag))
+		.filter(drink => drink.fields.allTags && drink.fields.allTags.includes(tag))
 		.map(drink => <Card key={drink.id} drink={drink}></Card>)
 		.slice(0, count)
 }
 
+
 export default function Rec(props) {
 	/* Drink Formatting */
-	const Drinks = getFilteredDrinks(props.drinks, props.filter, props.count);
+	const Drinks = getFilteredDrinks(props.drinks, props.allTags, props.count);
 	
 	/* Slider Settings */
 	let settings = {

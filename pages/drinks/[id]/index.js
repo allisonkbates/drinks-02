@@ -29,7 +29,7 @@ function Drink(props) {
 				<Nav></Nav>
 				<div className="drink__page">
 				<div className="drink__container">
-					<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--mobile"></img>
+					<img src={`/${drink.imgPath}.png`} height="200" className="drink__img--mobile"></img>
 					<div className="drink__left">
 						<h2 className="drink__name">{drink.cocktailName}</h2>
 						<Link href={drink.sourceLink || "/"}>
@@ -46,7 +46,7 @@ function Drink(props) {
 						<div className="drink__line"></div>
 					</div>
 					<div className="drink__right">
-						<img src={`/${drink.imgpath}.png`} height="200" className="drink__img--desktop"></img>
+						<img src={`/${drink.imgPath}.png`} height="200" className="drink__img--desktop"></img>
 						<h3 className="drink__heading">Variations</h3>
 						<p className="drink__body--link">{drink.variations}</p>
 						<h3 className="drink__heading">Barware</h3>
@@ -56,7 +56,7 @@ function Drink(props) {
 					</div>
 				</div>
 				</div>
-				<Rec drinks={props.drinks} filter={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></Rec>
+				<Rec drinks={props.drinks} allTags={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></Rec>
 				<Footer />
 			</div>
 	)
