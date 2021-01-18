@@ -120,8 +120,31 @@
 }
 
 .drink__variation {
-	padding-left: 0;
+	padding-left: 16px;
+	margin-bottom: 10px;
 	li {
-		list-style-type: none;
+	
 	}
+}
+
+.drink__variations {
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+
+.drink__ingNeeded {
+	background-color: #EFF3F4;
+	border: 1px solid #377084;
+	border-radius: 3px;
+	margin-top: 10px;
+	padding: 16px 16px 0px;
+}
+
+.drink__heading--accent {
+	font-family: 'Advent Pro', sans-serif;
+	font-size: 20px;
+	color: #377084;
+	font-weight: 700;
+	margin: 0;
+	text-transform: uppercase;
 }

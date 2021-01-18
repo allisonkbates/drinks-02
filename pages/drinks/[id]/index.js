@@ -43,7 +43,7 @@ function Drink(props) {
 
 	function formatVariations(variations) {
 		return <ul className="drink__variation">{variations.map(variation => {
-			return <li className="drink__body--link" key={variation}>{variation}</li>
+			return <li className="drink__body drink__variations" key={variation}>{variation}</li>
 		})}</ul>
 	}
 
@@ -58,6 +58,19 @@ function Drink(props) {
 	} else {
 		showVariations;
 	}
+
+	const ingNeeded = drink.ingNeededStrict;
+	let showIngNeeded;
+	if (ingNeeded) {
+		showIngNeeded = 
+		<div className="drink__ingNeeded">
+			<h3 className="drink__heading--accent">Ingredients Needed</h3>
+			{formatVariations(ingNeeded)}
+		</div>
+	} else {
+		showIngNeeded;
+	}
+
 
 	return (
 			<div>
@@ -86,6 +99,7 @@ function Drink(props) {
 							<img src={`/${drink.glassware}.svg`}></img>
 							<p className="drink__body">{drink.glassware}</p>
 						</div>
+							{showIngNeeded}
 						{/*
 						<h3 className="drink__heading">Tags</h3>
 						<p className="drink__body--link">{drink.allTags}</p>
