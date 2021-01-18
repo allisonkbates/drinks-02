@@ -1,25 +1,6 @@
-## To Dos
-- [X] Basic card in styled components
-- [X] Style Form to Add cocktail
-- [ ] Refactor form to be a modal and tweak design
-- [ ] Move styled components to their own files and clean up duplicate styles across components
-
-## API Endpoints
-- [X] getDrinks
-- [X] addDrinks
-- [ ] updateDrinks
-- [ ] deleteDrinks
-
-## API Endpoints V2
-- [ ] get a specific drink based on ID
-- [ ] get a list of drinks based on a specific filter
-
-## Notes on Nav
-- [ ] change to mobile style nav with hamburger when needed
-- [ ] add search bar when needed
-
-## Colors
-- #FFFFFF
-
-## 1-18 To Dos
-- 
+# 1-18 To Dos
+- Break out single drink page into smaller components
+- Build out ability to filter by alcohol (design first!)
+- Build new page to show ingredients that are in stock
+- Build ability to update whether an ingredient is in stock.
+- Form submission needs better submitted state, error handling, etc.

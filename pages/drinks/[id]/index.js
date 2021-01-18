@@ -4,7 +4,7 @@ import Rec from '../../../components/Rec';
 import Nav from '../../../components/Nav';
 import Footer from '../../../components/Footer';
 
-
+// This component is TOO BIG - break out into smaller components.
 
 function Drink(props) {
 	const drink = props.specificDrink.fields;

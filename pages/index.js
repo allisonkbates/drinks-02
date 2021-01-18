@@ -13,6 +13,7 @@ export default function Home(props) {
       <Rec drinks={props.drinks} allTags={"in-stock"} count={10} label={"Drinks based on your liquor cabinet..."}/>
       <Rec drinks={props.drinks} allTags={"daniel-recommends"} count={10} label={"Daniel recommends..."}/>
       <Rec drinks={props.drinks} allTags={"gin"} count={10} label={"Gin-based cocktails"}/>
+      {/* Add a new component here to filter by alcohol - design first :) */}
       <Footer />
     </div>
   )
