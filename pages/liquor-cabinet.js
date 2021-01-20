@@ -17,6 +17,10 @@ export default function LiquorCabinet(props) {
 				{showIngredients(props.ingredients)}
 			</ul>
 			{console.log(props.ingredients)}
+      <form>
+        <input type="checkbox" name="ingredient1" value="whiskey" checked></input>
+        <label htmlFor="ingredient1">Whiskey</label>
+      </form>
       <Footer />
     </div>
   )
