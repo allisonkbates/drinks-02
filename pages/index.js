@@ -1,4 +1,4 @@
-import { table, prepareRecords } from './api/utils/Airtable';
+import { drinksTable, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import Rec from '../components/Rec';
@@ -20,7 +20,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const drinks = await table.select({}).firstPage();
+  const drinks = await drinksTable.select({}).firstPage();
   const preparedDrinks = prepareRecords(drinks);
   return {
     props: {

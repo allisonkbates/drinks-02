@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #FFFFFF;
+	background-color: #FFFFFF;	
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 	padding: 0px 5%;
 }
@@ -29,6 +29,7 @@
 	display: flex;
 	align-items: center;
 	padding: 0px 25px;
+	margin: 0px 8px;
 	background-color: #377084;
 	border-radius: 5px;
 	color: #FFFFFF;
@@ -40,4 +41,9 @@
 
 .btn--primary:hover {
 	background-color: #2c5969;
+}
+
+.nav__button-group {
+	display: flex;
+
 }

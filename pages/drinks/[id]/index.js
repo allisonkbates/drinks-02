@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { table, prepareRecords } from "../../api/utils/Airtable";
+import { drinksTable, prepareRecords } from "../../api/utils/Airtable";
 import Rec from '../../../components/Rec';
 import Nav from '../../../components/Nav';
 import Footer from '../../../components/Footer';
@@ -116,7 +116,7 @@ function Drink(props) {
 // This function gets called at build time
 export async function getStaticPaths() {
 	// Call an external API endpoint to get posts
-	const drinks = await table.select({}).firstPage();
+	const drinks = await drinksTable.select({}).firstPage();
   const preparedDrinks = prepareRecords(drinks);
 
 	// Get the paths we want to pre-render based on posts
@@ -129,7 +129,7 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-	const drinks = await table.select({}).firstPage();
+	const drinks = await drinksTable.select({}).firstPage();
 	const preparedDrinks = prepareRecords(drinks);
 	const specificDrink = preparedDrinks.find(drink => drink.id === params.id)
   return {

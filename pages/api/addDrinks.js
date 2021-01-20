@@ -1,9 +1,9 @@
-import { table } from './utils/Airtable';
+import { drinksTable } from './utils/Airtable';
 
 export default async (req, res) => {
 	try {
 		const { cocktailName, ingredients, preparation, tags } = req.body.fields;
-		const createdRecords = await table.create([
+		const createdRecords = await drinksTable.create([
 			{ fields: { cocktailName, ingredients, preparation, tags} }
 		]);
 		res.statusCode = 200;

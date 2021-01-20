@@ -5,7 +5,8 @@ Airtable.configure({
 });
 
 const base = Airtable.base(process.env.AIRTABLE_BASE_ID);
-const table = base(process.env.AIRTABLE_TABLE_NAME);
+const drinksTable = base(process.env.AIRTABLE_DRINKS_TABLE_NAME);
+const ingredientsTable = base(process.env.AIRTABLE_INGREDIENTS_TABLE_NAME);
 
 
 const prepareRecord = (record) => {
@@ -19,4 +20,4 @@ const prepareRecords = (records) => {
 	return records.map((record) => prepareRecord(record));
 }
 
-export { table, prepareRecords, prepareRecord };
+export { ingredientsTable, drinksTable, prepareRecords, prepareRecord };
