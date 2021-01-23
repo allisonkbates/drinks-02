@@ -50,16 +50,16 @@ class Form extends Component {
   render() {
     return (
       <form className="form__container" onSubmit={this.handleSubmit}>
-        <label htmlFor="cocktailName">Cocktail Name</label>
+        <label htmlFor="cocktailName" className="drinkLabel">Cocktail Name</label>
         <input type="text" name="cocktailName" onChange={this.handleChange}/>
-        <label htmlFor="ingredients">What ingredients are in your cocktail?</label>
+        <label htmlFor="ingredients" className="drinkLabel">What ingredients are in your cocktail?</label>
         <textarea name="ingredients" rows="4" onChange={this.handleChange}></textarea>
-        <label htmlFor="preparation">Tell us how to make your cocktail</label>
+        <label htmlFor="preparation" className="drinkLabel">Tell us how to make your cocktail</label>
         <textarea name="preparation" rows="4" onChange={this.handleChange}></textarea>
-        <label htmlFor="alcohol">Select the primary alcohol</label>
+        <label htmlFor="alcohol" className="drinkLabel">Select the primary alcohol</label>
         <div className="select-container">
           <input type="radio" id="Gin" name="alcohol" value="Gin"/>
-          <label htmlFor="Gin">Gin</label><br></br>
+          <label htmlFor="Gin" className="drinkLabel">Gin</label><br></br>
           <input type="radio" id="Whiskey" name="alcohol" value="Whiskey"/>
           <label htmlFor="Whiskey" className="radio">Whiskey</label><br></br>
           <input type="radio" id="Vodka" name="alcohol" value="Vodka"/>
