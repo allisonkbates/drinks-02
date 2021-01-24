@@ -3,16 +3,10 @@ import Nav from '../components/Nav';
 import FormLayout from '../components/FormLayout';
 import IngredientsForm from '../components/IngredientsForm';
 import Footer from '../components/Footer';
-/*
-function showIngredients(ingredients) {
-	return ingredients
-		.map(ingredient => <li key={ingredient.id}>{`${ingredient.fields.ingredientName} - ${ingredient.fields.inStock ? 'In Stock' : 'Out of Stock'}`}</li>)
-}*/
 
 export default function LiquorCabinet(props) {
-
   return (
-    <div className="">
+    <div>
       <Nav />
       <FormLayout 
         heading={'Manage your Liquor Cabinet'} 
