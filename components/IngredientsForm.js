@@ -53,9 +53,12 @@ class IngredientsForm extends Component {
   render() {
     return (
       <form className="form__container" onSubmit={this.handleSubmit}>
+        <h1 className="add__heading">{this.props.heading}</h1>
         <IngredientList 
           ingredients={this.props.ingredients} 
-          handleChange={this.handleChange}>
+          handleChange={this.handleChange} 
+          filter={this.props.filter}
+          >
         </IngredientList>
 				<label htmlFor="submit" className="submit-label">Save Drink</label>
         <input type="submit" name="submit" value="Save Ingredients"/>

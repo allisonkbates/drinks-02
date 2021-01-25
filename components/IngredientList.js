@@ -1,6 +1,9 @@
 export default function IngredientList(props) {
+  console.log(props);
   let handleChange = props.handleChange;
+  let ingredientFilter = props.filter;
   return props.ingredients
+    .filter(ingredient => ingredient.fields.ingredientType && ingredient.fields.ingredientType === ingredientFilter)
     .map(ingredient => 
       <div className="row" key={ingredient.id}>
         <input type="hidden" name="id" value={ingredient.id}></input>

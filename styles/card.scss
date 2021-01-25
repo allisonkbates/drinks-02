@@ -1,5 +1,6 @@
 .card {
 	margin-right: 10px;
+	margin-bottom: 30px;
 	cursor: pointer;
 	@media only screen and (min-width: 768px) {
 		margin-right: 20px;
@@ -44,4 +45,8 @@
 
 .card__link {
 	cursor: pointer;
+}
+
+.card-width-400 {
+	width: 400px;
 }

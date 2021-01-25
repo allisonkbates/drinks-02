@@ -11,7 +11,16 @@ export default function LiquorCabinet(props) {
       <FormLayout 
         heading={'Manage your Liquor Cabinet'} 
         description={'Keep track of what alcohol you have in stock.'}>
-        <IngredientsForm ingredients={props.ingredients}></IngredientsForm>
+        <IngredientsForm 
+          ingredients={props.ingredients} 
+          filter={'primary-alcohol'}
+          heading={'Primary Alcohols'}>
+        </IngredientsForm>
+        <IngredientsForm 
+          ingredients={props.ingredients} 
+          filter={'non-alcohol'}
+          heading={'Non Alcohol Ingredients'}>
+        </IngredientsForm>
       </FormLayout>
       <Footer />
     </div>

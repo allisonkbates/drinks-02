@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { drinksTable, prepareRecords } from "../../api/utils/Airtable";
-import Rec from '../../../components/Rec';
+import DrinkSlider from '../../../components/DrinkSlider';
 import Nav from '../../../components/Nav';
 import Footer from '../../../components/Footer';
 
@@ -107,7 +107,7 @@ function Drink(props) {
 					</div>
 				</div>
 				</div>
-				<Rec drinks={props.drinks} allTags={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></Rec>
+				<DrinkSlider drinks={props.drinks} allTags={"daniel-recommends"} count={10} label={"Drinks you might like..."} size="rec__small"></DrinkSlider>
 				<Footer />
 			</div>
 	)

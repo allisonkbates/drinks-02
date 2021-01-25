@@ -8,10 +8,10 @@ function filterTags(drinks, tag) {
 	return drinks.filter(drink => drink.fields.tags && drink.fields.tags.includes(tag));
 }
 
-function getFilteredDrinks(drinks, tag, num) {
+function getFilteredDrinks(drinks, tag, num, width) {
 	return drinks
-		.filter(drink => drink.fields.tags && drink.fields.tags.includes(tag))
-		.map(drink => <Card key={drink.id} drink={drink}></Card>)
+		.filter(drink => drink.fields.allTags && drink.fields.allTags.includes(tag))
+		.map(drink => <Card key={drink.id} drink={drink} width={width}></Card>)
 		.slice(0, num)
 }
 

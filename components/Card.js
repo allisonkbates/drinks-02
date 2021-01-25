@@ -5,9 +5,9 @@ export default function Card(props) {
 	const id = props.drink.id;
 
 	return (
-		<Link href={`/drinks/${id}`} className="card__link">
+		<Link href={`/drinks/${id}`} className={`card__link`}>
 			<div className="card">
-				<div className="card__img-container">
+				<div className={`card__img-container ${props.width}`}>
 					<img src={`/${drink.imgPath}.png`} className="card__img"></img>
 				</div>
 				<div className="card__drink-name">

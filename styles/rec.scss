@@ -31,3 +31,29 @@
 		right: -5px;
 	}
 }
+
+.view-all {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	padding: 5% 7%;
+}
+
+.all__heading {
+	padding: 5% 7% 0%; 
+	margin: 0;
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: bold;
+	font-size: 32px;
+	color: #222222;
+	text-transform: uppercase;
+}
+
+.inline {
+	display: inline-flex;
+	align-items: baseline;
+}
+
+.inline-link {
+	margin-left: 16px;
+}
