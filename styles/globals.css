@@ -2,11 +2,14 @@
 
 :root {
   --main-color: #377084;
+  --bg-color: #EFF3F4;
+  --white: #ffffff;
+
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #EFF3F4;
+  background-color: var(--bg-color);
 }

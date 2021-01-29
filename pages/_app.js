@@ -10,6 +10,7 @@ import '../styles/rec.scss';
 import '../styles/card.scss';
 import '../styles/form.scss';
 import '../styles/drink.scss';
+import '../styles/filter.scss';
 
 
 function MyApp({ Component, pageProps }) {
