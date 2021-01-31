@@ -4,14 +4,20 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 export default function viewAll(props) {
-	const drinks = getFilteredDrinks(props.drinks, 'all', 100, 'card-width-400');
+  const drinks = props.drinks;
+  let  initialDrinks = getFilteredDrinks(drinks, 'all', 100, 'card-width-400');
+  
+  function handleClick(event) {
+    console.log(event);
+    /* learn use state */
+  }
 
   return (
     <div className="">
       <Nav />
       <h1 className="all__heading">View All Drinks</h1>
       <div className="filter__container">
-        <button className="filter__chip filter__chip--active" value="whiskey">Whiskey</button>
+        <button className="filter__chip filter__chip--active" value="whiskey" onClick={handleClick}>Whiskey</button>
         <button className="filter__chip" value="gin">Gin</button>
         <button className="filter__chip" value="vodka">Vodka</button>
         <button className="filter__chip" value="rum">Rum</button>
@@ -19,7 +25,7 @@ export default function viewAll(props) {
         <button className="filter__chip" value="other">Other</button>
       </div>
       <div className="view-all">
-				{drinks}
+				{initialDrinks}
 			</div>
       <Footer />
     </div>
