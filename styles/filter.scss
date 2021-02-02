@@ -21,6 +21,7 @@
 	height: 40px;
 	margin: 8px;
 	outline: none;
+	cursor: pointer;
 }
 
 .filter__chip[aria-pressed="true"] {
@@ -31,4 +32,5 @@
 .drinksList__container {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 }
