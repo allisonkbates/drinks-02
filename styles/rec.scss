@@ -1,5 +1,8 @@
 .rec__container {
-	padding: 5% 7%;
+	padding: 0;
+	@media only screen and (min-width: 768px) {
+		padding: 5% 7% 16px;
+	}
 }
 
 .rec__heading {
@@ -17,16 +20,19 @@
 }
 
 .slick-prev:before, .slick-next:before {
-	color: #222222;
-	opacity: 1;
+	@media only screen and (min-width: 768px) {
+		color: #222222;
+		opacity: 1;
+	}
 }
 
 .slick-prev {
-	left: -25px;
+	@media only screen and (min-width: 768px) {
+		left: -25px;
+	}
 }
 
 .slick-next {
-	right: -15px;
 	@media only screen and (min-width: 768px) {
 		right: -5px;
 	}

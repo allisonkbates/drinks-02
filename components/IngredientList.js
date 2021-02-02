@@ -1,5 +1,4 @@
 export default function IngredientList(props) {
-  console.log(props);
   let handleChange = props.handleChange;
   let ingredientFilter = props.filter;
   return props.ingredients

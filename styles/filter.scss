@@ -1,7 +1,13 @@
+.page__container {
+	padding: 5% 5%;
+	flex-direction: column;
+}
+
 .filter__container {
 	display: flex;
+	flex-wrap: wrap;
 	width: 90%;
-	padding: 24px 7% 0%;
+	padding: 24px 0% 24px;
 }
 
 .filter__chip {
@@ -13,10 +19,16 @@
 	padding: 10px 28px;
 	color: var(--main-color);
 	height: 40px;
-	margin-right: 16px;
+	margin: 8px;
+	outline: none;
 }
 
-.filter__chip--active {
+.filter__chip[aria-pressed="true"] {
 	background-color: var(--main-color);
 	color: var(--white);
+}
+
+.drinksList__container {
+	display: flex;
+	flex-wrap: wrap;
 }
