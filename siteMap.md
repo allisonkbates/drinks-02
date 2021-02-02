@@ -1,6 +1,7 @@
 # Pages
 
 ## Home Page
+- [X] V1 COMPLETE
 - NAV COMPONENT
 - HERO COMPONENT: As a user, I can see the drink of the day & can click a CTA to view full recipe.
 - FILTERED COLLECTION SLIDER COMPONENT: As a user, I can see the first 10 results from 3-4 filtered collections of drinks
@@ -10,6 +11,7 @@
 - FOOTER COMPONENT
 
 ## View Drinks Page
+- [X] V1 COMPLETE
 - NAV COMPONENT
 - DRINKS CARD LIST COMPONENT: As a user, I can see drink cards based on the filters I've set.
 	- FILTER BUTTONS: Buttons for user to filter drinks on page
@@ -17,6 +19,7 @@
 - FOOTER COMPONENT
 
 ## Single Drink Page
+- [X] V1 COMPLETE
 - NAV COMPONENT
 - SINGLE DRINK COMPONENT: 
 	- VIEW TEMPLATE: As a user, I can see all the information needed to make my drink. 
@@ -24,6 +27,7 @@
 - FOOTER COMPONENT
 
 ## Add Drink Page
+- [X] V1 COMPLETE
 - NAV COMPONENT
 - DRINK FORM COMPONENT: As a user, I can add a drink to the drinkDB.
 - FOOTER COMPONENT
