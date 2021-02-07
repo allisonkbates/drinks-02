@@ -10,11 +10,11 @@ export default function Nav() {
 				</div>
 			</Link>
 			<div className="nav__button-group">
-				<Link href="/add">
+        <Link href="/liquor-cabinet">
+          <a className="link--primary">Liquor Cabinet</a>
+        </Link>
+        <Link href="/add">
 					<a className="btn--primary">Add a Drink</a>
-				</Link>
-				<Link href="/liquor-cabinet">
-					<a className="btn--primary">Liquor Cabinet</a>
 				</Link>
 			</div>
 		</div>

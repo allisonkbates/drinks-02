@@ -8,3 +8,4 @@
 - Update page to show ingredients that are in stock by category for readability
 - Build ability to update whether an ingredient is in stock. - Built just needs to be designed better to break out by ingredents type so it's not so overwhelming.
 - Form submission needs better submitted state, error handling, etc.
+- Look into whether it makes sense to serve pics from Airtable vs. loaded in file

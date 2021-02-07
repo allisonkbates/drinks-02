@@ -40,10 +40,25 @@
 }
 
 .btn--primary:hover {
-	background-color: #2c5969;
+	background-color: #215d70;
 }
 
 .nav__button-group {
 	display: flex;
 
+}
+
+.link--primary {
+	display: flex;
+	align-items: center;
+	color: #377084;
+	cursor: pointer;
+	margin-right: 16px;
+  font-size: 16px;
+  font-family: 'Advent Pro', sans-serif;
+  text-decoration: none;
+}
+
+.link--primary:hover {
+	text-decoration: underline
 }
