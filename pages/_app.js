@@ -11,10 +11,15 @@ import '../styles/card.scss';
 import '../styles/form.scss';
 import '../styles/drink.scss';
 import '../styles/filter.scss';
+import { MenuStateProvider } from "../helpers/menuState";
 
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <MenuStateProvider>
+      <Component {...pageProps} />
+    </MenuStateProvider>
+  )
 }
 
 export default MyApp;

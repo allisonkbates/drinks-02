@@ -1,13 +1,43 @@
 import Link from 'next/link';
+import { useMenu } from '../helpers/menuState';
+import styled from 'styled-components';
+
+function Hamburger() {
+  const { toggleMenu } = useMenu();
+  return (
+    <button type="button" className="hamburger__container" onClick={toggleMenu}>
+      <div className="hamburger__line"></div>
+      <div className="hamburger__line"></div>
+      <div className="hamburger__line"></div>
+    </button>
+  )
+}
+/*
+
+const MenuExpandedStyles = styled.div`
+  display: flex;
+  background-color: red;
+  color: black;
+  transform: translateX(-150%);
+  ${(props) => props.open && `transform: translateX(0);`}
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+function MenuExpanded() {
+  const { menuOpen } = useMenu()
+  return (
+    <MenuExpandedStyles open={menuOpen}>
+      <h1>I'm an expanded menu for mobile!</h1>
+    </MenuExpandedStyles>
+  )
+}*/
 
 export default function Nav() {
 	return (
 		<div className="nav__container">
-      <div class="hamburger__container">
-        <div class="hamburger__line"></div>
-        <div class="hamburger__line"></div>
-        <div class="hamburger__line"></div>
-      </div>
+      <Hamburger />
 			<Link href="/">
 				<div className="logo__container">
 					<img src="/logo-color.svg" className="logo__img"></img>
