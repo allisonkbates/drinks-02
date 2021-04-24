@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useMenu } from '../helpers/menuState';
+import Search from './Search';
 import styled from 'styled-components';
 
 function Hamburger() {
@@ -44,7 +45,9 @@ export default function Nav() {
 					<h1 className="logo__title">Drinks DB</h1>
 				</div>
 			</Link>
+      <Search></Search>
 			<div className="nav__button-group">
+        
         <Link href="/liquor-cabinet">
           <a className="link--primary">Liquor Cabinet</a>
         </Link>
