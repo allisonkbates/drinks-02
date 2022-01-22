@@ -8,12 +8,12 @@ import Footer from '../../../components/Footer';
 
 function Drink(props) {
 	const drink = props.specificDrink.fields;
-	console.log(drink);
+	const drinks = props.drinks;
 
 	// for the ingredients
 	function formatList(text) {
-		const textToRows = (text.split('\n'))
-		return <ul className="drink__body">{textToRows.map((row) => {
+		const textToList = (text.split('\n'));
+		return <ul className="drink__body">{textToList.map((row) => {
 			return <li className="drink__list-items" key={row}>{row}</li>
 		})}
 		</ul>
@@ -21,8 +21,9 @@ function Drink(props) {
 
 	// for preparation
 	function formatOrderedList(text) {
-		const textToRows = (text.split('\n'))
-		return <ol className="drink__body">{textToRows.map((row) => {
+		const textToList = (text.split('\n'));
+		textToList.pop(); /* for some reason, an extra item to the ordered list is added, so removing using pop */
+		return <ol className="drink__body">{textToList.map((row) => {
 			return <li className="drink__list-items" key={row}>{row}</li>
 		})}
 		</ol>
@@ -32,18 +33,19 @@ function Drink(props) {
 	const editorialNotes = drink.editorialNotes;
 	let showEditorial;
 	if (editorialNotes) {
-		showEditorial;	
-	/*	<div>
+		showEditorial = 	
+		<div>
 			<p className="drink__editorial">{drink.editorialNotes || ''}</p>
 			<div className="drink__line"></div>
-		</div>*/
+		</div>
 	} else {
 		showEditorial;
 	}
 
 	function formatVariations(variations) {
-		return <ul className="drink__variation">{variations.map(variation => {
-			return <li className="drink__body drink__variations" key={variation}>{variation}</li>
+		let findVariations = drinks.filter((drink) => variations.includes(drink.id));
+		return <ul className="drink__variation">{findVariations.map(variation => {
+			return <li className="drink__body drink__variations" key={variation.id}><a href={`/drinks/${variation.id}`}>{variation.fields.cocktailName}</a></li>
 		})}</ul>
 	}
 
@@ -53,7 +55,7 @@ function Drink(props) {
 		showVariations = 
 		<div>
 			<h3 className="drink__heading">Variations</h3>
-			{formatVariations(drink.variationsLookup)}
+			{formatVariations(drink.variations)}
 		</div>
 	} else {
 		showVariations;
@@ -70,14 +72,15 @@ function Drink(props) {
 	} else {
 		showIngNeeded;
 	}
-
+  
+	let drinkUrl = drink.drinkImg ? drink.drinkImg[0].url : '/alaska.png'; 
 
 	return (
 			<div>
 				<Nav></Nav>
 				<div className="drink__page">
 				<div className="drink__container">
-					<img src={`/${drink.imgPath}.png`} height="200" className="drink__img--mobile"></img>
+					<img src={drinkUrl} height="200" className="drink__img--mobile"></img>
 					<div className="drink__left">
 						<h2 className="drink__name">{drink.cocktailName}</h2>
 						<Link href={drink.sourceLink || "/"}>
@@ -92,7 +95,7 @@ function Drink(props) {
 						{formatOrderedList(drink.preparation)}
 					</div>
 					<div className="drink__right">
-						<img src={`/${drink.imgPath}.png`} height="200" className="drink__img--desktop"></img>
+						<img src={drinkUrl} height="200" className="drink__img--desktop"></img>
 						{showVariations}
 						<h3 className="drink__heading">Barware</h3>
 						<div className="drink__glassware">
@@ -116,7 +119,9 @@ function Drink(props) {
 // This function gets called at build time
 export async function getStaticPaths() {
 	// Call an external API endpoint to get posts
-	const drinks = await drinksTable.select({}).firstPage();
+	const drinks = await drinksTable.select({
+    view: "Publish View"
+  }).firstPage();
   const preparedDrinks = prepareRecords(drinks);
 
 	// Get the paths we want to pre-render based on posts
@@ -129,7 +134,9 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-	const drinks = await drinksTable.select({}).firstPage();
+	const drinks = await drinksTable.select({
+    view: "Publish View"
+  }).firstPage();
 	const preparedDrinks = prepareRecords(drinks);
 	const specificDrink = preparedDrinks.find(drink => drink.id === params.id)
   return {

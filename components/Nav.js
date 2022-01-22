@@ -45,7 +45,7 @@ export default function Nav() {
 					<h1 className="logo__title">Drinks DB</h1>
 				</div>
 			</Link>
-      <Search></Search>
+      {/* <Search></Search> */}
 			<div className="nav__button-group">
         
         <Link href="/liquor-cabinet">

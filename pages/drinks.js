@@ -1,3 +1,5 @@
+/* This page is largely repetitive from the home page, but only includes the filters for cocktails and loses the "homepage" component feel. */
+
 import { drinksTable, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
 import DrinksListLayout from '../components/DrinksListLayout';
@@ -13,10 +15,11 @@ export default function drinks(props) {
 	);
 }
 
-export async function getStaticProps() {
+/* Note: This is the same query as on the /index page. */
+export async function getStaticProps() { 
   const drinks = await drinksTable.select({
-    sort: [{field: "cocktailName", direction: "asc"}]
-  }).firstPage();
+    view: "Publish View"
+  }).firstPage(); /* This may break down at some point because we're only fetching the first page of drinks */
   const preparedDrinks = prepareRecords(drinks);
   return {
     props: {
