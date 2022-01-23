@@ -13,12 +13,12 @@ export default function LiquorCabinet(props) {
         description={'Keep track of what alcohol you have in stock.'}>
         <IngredientsForm 
           ingredients={props.ingredients} 
-          filter={'primary-alcohol'}
-          heading={'Primary Alcohols'}>
+          filter={'alcohol'}
+          heading={'Alcohol'}>
         </IngredientsForm>
         <IngredientsForm 
           ingredients={props.ingredients} 
-          filter={'non-alcohol'}
+          filter={'grocery'}
           heading={'Non Alcohol Ingredients'}>
         </IngredientsForm>
       </FormLayout>
