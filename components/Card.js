@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 export default function Card(props) {
-	// console.log(props.drink);
 	const drink = props.drink.fields;
 	const id = props.drink.id;
 	let drinkUrl = drink.drinkImg ? drink.drinkImg[0].url : '/alaska.png'; 

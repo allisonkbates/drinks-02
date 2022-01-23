@@ -46,7 +46,7 @@ export default function Home(props) {
 }
 
 /* Note: This is the same query as on the /drinks page. */
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const drinks = await drinksTable.select({
     view: "Publish View"
   }).firstPage(); /* This may break down at some point because we're only fetching the first page of drinks */
