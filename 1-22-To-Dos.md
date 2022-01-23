@@ -5,15 +5,17 @@
 ## Features
 - [x] Clean data for liquor cabinet
 - [x] Test if image upload in airtable works
-- [ ] Upload images to Airtable & delete from app
-- [ ] Add Image Credit & Link
+- [x] Upload images to Airtable & delete from app
+- [x] Add Image Credit & Link
 - [x] Add Link to Variation
-- [ ] Determine UI & data flow for updating ingredients
+- [ ] Determine UI for Updating Ingredients
+- [ ] Update ingredients form to update on change
 - [ ] Search for drinks
+- [ ] Improve Mobile Views
 - [ ] Fix Add Drink Form
 
 ## Bugs
-- [ ] Extra blank numbered item in preparation even though airtable didn't add it
+- [x] Extra blank numbered item in preparation even though airtable didn't add it
 
 ## Bugs (Right now, they're fixed by updating the content 😬)
 - Bug when ingredients & preparation fields are filled out
