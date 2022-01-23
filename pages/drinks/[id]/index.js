@@ -143,7 +143,8 @@ export async function getStaticProps({ params }) {
     props: {
 			specificDrink: specificDrink,
 			drinks: preparedDrinks
-    }
+    },
+		revalidate: 10,
   }
 }
 
