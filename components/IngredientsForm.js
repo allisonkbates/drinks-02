@@ -54,14 +54,14 @@ class IngredientsForm extends Component {
     return (
       <form className="form__container" onSubmit={this.handleSubmit}>
         <h1 className="add__heading">{this.props.heading}</h1>
+        <input type="submit" name="submit" value="Save Ingredients"/>
         <IngredientList 
           ingredients={this.props.ingredients} 
           handleChange={this.handleChange} 
-          filter={this.props.filter}
           >
         </IngredientList>
 				<label htmlFor="submit" className="submit-label">Save Drink</label>
-        <input type="submit" name="submit" value="Save Ingredients"/>
+        
       </form>
     )
   }

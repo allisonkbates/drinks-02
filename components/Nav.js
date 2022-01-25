@@ -6,7 +6,7 @@ import styled from 'styled-components';
 function Hamburger() {
   const { toggleMenu } = useMenu();
   return (
-    <button type="button" className="hamburger__container" onClick={toggleMenu}>
+    <button type="button" className="hamburger__container"> {/*need to re-add onClick*/}
       <div className="hamburger__line"></div>
       <div className="hamburger__line"></div>
       <div className="hamburger__line"></div>
@@ -51,12 +51,13 @@ export default function Nav() {
         <Link href="/liquor-cabinet">
           <a className="link--primary">Liquor Cabinet</a>
         </Link>
-        <Link href="/add">
+        {/* removing add drink button for now */}
+        {/* <Link href="/add">
 					<a className="btn--primary">+ Add Drink</a>
 				</Link>
         <Link href="/add">
           <a className="btn--primary mobile">+</a>
-        </Link>
+        </Link> */}
 			</div>
 		</div>
 	)

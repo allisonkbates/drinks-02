@@ -12,3 +12,21 @@ body {
   margin: 0;
   background-color: var(--bg-color);
 }
+
+h1 {
+  font-family: "Advent Pro", sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	color: #377084;
+}
+
+p {
+  font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #222222;
+}
+
+.page_container {
+  margin: 4em;
+}

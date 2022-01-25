@@ -8,6 +8,7 @@
 - [x] Upload images to Airtable & delete from app
 - [x] Add Image Credit & Link
 - [x] Add Link to Variation
+- [x] Add server side rendering & ISR
 - [ ] Determine UI for Updating Ingredients
 - [ ] Update ingredients form to update on change
 - [ ] Search for drinks

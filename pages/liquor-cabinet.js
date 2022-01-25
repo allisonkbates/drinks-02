@@ -1,6 +1,5 @@
 import { ingredientsTable, prepareRecords } from './api/utils/Airtable';
 import Nav from '../components/Nav';
-import FormLayout from '../components/FormLayout';
 import IngredientsForm from '../components/IngredientsForm';
 import Footer from '../components/Footer';
 
@@ -8,20 +7,13 @@ export default function LiquorCabinet(props) {
   return (
     <div>
       <Nav />
-      <FormLayout 
-        heading={'Manage your Liquor Cabinet'} 
-        description={'Keep track of what alcohol you have in stock.'}>
+      <div className="page_container">
+        <h1>Manage your Liquor Cabinet</h1>
+        <p>Keep track of what ingredients you have in stock.</p>
         <IngredientsForm 
-          ingredients={props.ingredients} 
-          filter={'alcohol'}
-          heading={'Alcohol'}>
+          ingredients={props.ingredients}>
         </IngredientsForm>
-        <IngredientsForm 
-          ingredients={props.ingredients} 
-          filter={'grocery'}
-          heading={'Non Alcohol Ingredients'}>
-        </IngredientsForm>
-      </FormLayout>
+      </div>
       <Footer />
     </div>
   )
